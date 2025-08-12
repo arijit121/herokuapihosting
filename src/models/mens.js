@@ -1,8 +1,8 @@
-const express = require("express");
+import express from "express";
 
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const menSchema = new mongoose.Schema({
+const menSchema =  new mongoose.Schema({
     ranking: {
         type: Number,
         required: true,
@@ -41,4 +41,4 @@ const menSchema = new mongoose.Schema({
 // we are creating a new collection
 const MensRanking = new mongoose.model("MenRanking", menSchema)
 
-module.exports = MensRanking;
+export default MensRanking;
